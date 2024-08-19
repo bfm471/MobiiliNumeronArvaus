@@ -5,7 +5,7 @@ import { Alert, Button, StyleSheet, Text, TextInput, View } from 'react-native';
 export default function App() {
   const [challenge, setChallenge] = useState('Arvaa numero väliltä 1 - 100');
   const [guess, setGuess] = useState('');
-  const [correct, setCorrect] = useState(Math.floor(Math.random() * 100));
+  const [correct, setCorrect] = useState(Math.floor(Math.random() * 100) + 1);
   const [guesses, setGuesses] = useState(0);
 
   const handleArvaa = () => {
@@ -22,7 +22,7 @@ export default function App() {
       setChallenge('Arvaa numero väliltä 1 - 100');
       setGuesses(0);
       setGuess('');
-      setCorrect(Math.floor(Math.random() * 100));
+      setCorrect(Math.floor(Math.random() * 100) + 1);
     }
   }
 
